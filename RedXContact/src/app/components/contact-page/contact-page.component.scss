@@ -18,19 +18,23 @@ mat-icon {
     align-self: center;
 }
 
-.data {
-    flex-direction: column;
+.listName {
+    margin-left: 600px;
 }
 
-.cdk-focused {
-    border-bottom:#c2185b solid;
+.data {
+    flex-direction: column;
 }
 
 @media screen and (max-width: 1350px) {
 	div {
     flex-direction: column;
   }
-  mat-icon {
+  .info mat-icon {
       padding-top: 20px;
+  }
+
+  .listName {
+      margin-left: 0;
   }
 }

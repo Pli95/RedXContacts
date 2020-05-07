@@ -1,10 +1,11 @@
 <div>
-    <mat-card>
+    <mat-card class="listName">
         <mat-list *ngIf="contacts">
             <mat-card-title *ngFor="let eachContact of contacts">
+                <button mat-button (click)="deleteContactById(eachContact.id)"><mat-icon>clear</mat-icon></button>
                 <button mat-button (click)="getContactById(eachContact.id, $event)">
                     {{eachContact.givenName}} {{eachContact.familyName}}
-                    <mat-icon>arrow_right</mat-icon>
+                    <mat-icon class="arrow">arrow_right</mat-icon>
                 </button>
             </mat-card-title>
         </mat-list>

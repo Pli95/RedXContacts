@@ -28,4 +28,8 @@ export class ApiServiceService {
     return this.http.post('http://localhost:3000/api/Contacts', info, httpOptions)
 
   }
+
+  deleteContactbyId(_id:number) {
+    return this.http.delete(`http://localhost:3000/api/Contacts/${_id}`)
+  }
 }
