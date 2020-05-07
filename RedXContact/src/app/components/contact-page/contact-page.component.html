@@ -1,0 +1,47 @@
+<div>
+    <mat-card>
+        <mat-list *ngIf="contacts">
+            <mat-card-title *ngFor="let eachContact of contacts">
+                <button mat-button (click)="getContactById(eachContact.id, $event)">
+                    {{eachContact.givenName}} {{eachContact.familyName}}
+                    <mat-icon>arrow_right</mat-icon>
+                </button>
+            </mat-card-title>
+        </mat-list>
+        <mat-card-title *ngIf="!contacts">
+            No Contacts Have Been Saved
+        </mat-card-title>
+    </mat-card>
+
+
+    <mat-card *ngIf="contact && clicked">
+        <div class="info">
+            <mat-icon>cake</mat-icon>
+        <div class="data">
+            <mat-card-subtitle>Birthday</mat-card-subtitle>
+            <mat-card-content>{{contact.birthdate | date :'MM/dd/yyyy'}}</mat-card-content>
+        </div>
+        </div>
+        
+        <mat-divider></mat-divider>
+        
+        <div class="info">
+            <mat-icon>mail</mat-icon>
+        <div class="data">
+            <mat-card-subtitle>Email</mat-card-subtitle>
+            <mat-card-content>{{contact.email}}</mat-card-content>
+        </div>
+        </div>
+        
+        <mat-divider></mat-divider>
+
+        <div class="info">
+            <mat-icon>local_phone</mat-icon>
+        <div class="data">
+            <mat-card-subtitle>Phone</mat-card-subtitle>
+            <mat-card-content>{{contact.phoneNumber}}</mat-card-content>
+        </div>
+        </div>
+        
+    </mat-card>
+</div>

@@ -1,0 +1,64 @@
+<div>
+    <mat-card>
+        <form #contactForm="ngForm">
+            <mat-form-field>
+                <mat-label>First Name:</mat-label>
+                <input 
+                matInput
+                required
+                name="givenName"
+                [(ngModel)]="contact.givenName"
+                #givenName="ngModel"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Last Name:</mat-label>
+                <input 
+                matInput
+                required
+                name="familyName"
+                [(ngModel)]="contact.familyName"
+                #familyName="ngModel"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Birthday:</mat-label>
+                <input 
+                matInput
+                type="date"
+                required
+                name="birthdate"
+                [(ngModel)]="contact.birthdate"
+                #birthdate="ngModel"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email:</mat-label>
+                <input 
+                matInput 
+                type="email"
+                required
+                name="email"
+                [(ngModel)]="contact.email"
+                #email="ngModel"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Phone Number:</mat-label>
+                <input 
+                matInput 
+                type="number"
+                required
+                name="phoneNumber"
+                [(ngModel)]="contact.phoneNumber"
+                #phoneNumber="ngModel"
+                >
+            </mat-form-field>
+    
+            <mat-card-actions>
+                <button mat-raised-button color="accent" [disabled]="contactForm.invalid" (click)="addContact(contactForm.value)">Add Contact</button>
+            </mat-card-actions>
+        </form>
+        
+    </mat-card>
+</div>

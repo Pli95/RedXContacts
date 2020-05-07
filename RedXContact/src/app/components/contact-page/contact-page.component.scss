@@ -1,0 +1,36 @@
+div {
+    display: flex;
+    margin: 20px;
+}
+
+mat-card {
+    margin: 20px;
+}
+
+button {
+    font-size: large;
+    margin: 20px 0;
+}
+
+mat-icon {
+    height: auto;
+    width: auto;
+    align-self: center;
+}
+
+.data {
+    flex-direction: column;
+}
+
+.cdk-focused {
+    border-bottom:#c2185b solid;
+}
+
+@media screen and (max-width: 1350px) {
+	div {
+    flex-direction: column;
+  }
+  mat-icon {
+      padding-top: 20px;
+  }
+}
